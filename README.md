@@ -1,3 +1,61 @@
+# Setup Notes TLDR
+
+1. Install `nvm` (Node Version Manager):
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+```
+
+2. Install `node (v23.3.0)`:
+```
+nvm install 23.3.0
+```
+
+3. Install `pnpm`:
+```
+npm install -g pnpm
+```
+
+4. Clone the repository:
+```
+git clone https://github.com/PIN-AI/eliza.git
+cd eliza
+```
+
+5. Install dependencies:
+```
+pnpm install --no-frozen-lockfile
+```
+
+6. Build the project:
+```
+pnpm build
+```
+
+7. Configure the `.env` file:
+```
+# 1. Reachout to Boliang to get the API credentials.
+
+# 2. Copy the .env.example file to .env
+cp .env.example .env
+
+# 3. Edit the .env file with the API credentials
+```
+
+8. [optional] Create a new Telegram bot and get the bot token:
+
+* Search for `@BotFather` in Telegram
+* Follow the instructions to create a new bot and get the bot token.
+* Edit the `.env` file with the bot token.
+
+9. Start the project:
+```
+pnpm start:debug --character="characters/anling_pinai.character.json"
+```
+
+Now chat with the bot in Telegram!
+
+----
+
 # Eliza 🤖
 
 <div align="center">
